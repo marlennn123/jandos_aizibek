@@ -6,17 +6,10 @@ class Department(models.Model):
     descriptionm = models.TextField()
 
 
-
 class Professor(models.Model):
     user = models.CharField(max_length=32, unique=True)
-    department = models.TextField()
-    title = models.ForeignKey(Department, on_delete=models.CASCADE)
-    CHOICES_BIO = (
-        ("", ""),
-        ("", ""),
-        ("", "")
-    )
-    bio = models.CharField(max_length=32, choices=CHOICES_BIO)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    bio = models.TextField()
 
 
 class Student(models.Model):
