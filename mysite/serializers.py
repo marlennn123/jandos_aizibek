@@ -20,4 +20,4 @@ class StudentSerialzer(serializers.ModelSerializer):
 class CoursSerialzer(serializers.ModelSerializer):
     class Meta:
         model = Cours
-        fields = '__all__'
+        fields = ["name","code","description","department", "professor", "price" ]
